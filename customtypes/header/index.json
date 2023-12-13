@@ -1,6 +1,6 @@
 {
   "id": "header",
-  "label": "Header Reusable",
+  "label": "Header",
   "format": "custom",
   "repeatable": true,
   "status": true,
