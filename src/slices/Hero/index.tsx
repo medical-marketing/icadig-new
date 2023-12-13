@@ -55,6 +55,23 @@ const components: componentsType = ({
         </Heading>
       );
     },
+    strong: ({ children }: any) => (
+      <strong
+        style={{
+          color: "#B11C10",
+        }}
+      >
+        {children}
+      </strong>
+    ),
+    em: ({ children }) => {
+      // console.log("children", children);
+      return (
+        <span className="icadig" style={{ color: "#383838" }}>
+          {children}
+        </span>
+      );
+    },
     paragraph: ({ children }: any) => (
       <Paragraph
         className="text-center text-lg md:text-xl text-black-500 mt-8 mb-10"

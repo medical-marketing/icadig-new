@@ -14,6 +14,8 @@ const config: Config = {
       fontFamily: {
         body: ["var(--font-body)"],
         display: ["var(--font-display)"],
+        roboto: ["var-(--font-roboto)"],
+        baskervville: ["var-(--font-baskervville)"],
       },
       screens: {
         xs: "375px",

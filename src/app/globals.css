@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.cdnfonts.com/css/calibri-light');
+@import url('https://fonts.cdnfonts.com/css/baskerville');
+
 * {
     margin: 0;
     border: 0;
@@ -25,11 +28,19 @@ ul>li::before {
     margin-right: 0.5em;
     padding: 0.5px 4px;
     padding-top: 2.25px;
-    background-color: #D1AC57;
+    background-color: green;
     border-radius: 50px;
     color: white;
 }
 
 strong {
-    color: #D1AC57;
+    color: #B11C10;
+}
+
+.icadig:first-child {
+    font-family: 'Calibri Light', sans-serif;
+}
+
+.icadig:last-child {
+    font-family: "baskervville";
 }

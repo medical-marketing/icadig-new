@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import clsx from "clsx";
 
-import { Nunito, Nunito_Sans } from "next/font/google";
+import { Nunito, Nunito_Sans, Roboto, Baskervville } from "next/font/google";
 
 import { createClient, repositoryName } from "@/prismicio";
 import { PrismicPreview } from "@prismicio/next";
@@ -22,6 +22,20 @@ const display = Nunito({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+});
+
+const roboto = Roboto({
+  display: "swap",
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: "300",
+});
+
+const baskervville = Baskervville({
+  weight: "400",
+  display: "swap",
+  variable: "--font-baskervville",
+  subsets: ["latin"],
 });
 
 type Props = {
@@ -78,7 +92,14 @@ export default async function RootLayout({
   console.log("block indexing", block_indexing_by_search_engines);
   return (
     <html lang="en">
-      <body className={clsx(body.variable, display.variable)}>
+      <body
+        className={clsx(
+          body.variable,
+          display.variable,
+          roboto.variable,
+          baskervville.variable
+        )}
+      >
         <Providers>
           <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
           {children}

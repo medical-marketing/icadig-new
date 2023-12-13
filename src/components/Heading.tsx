@@ -7,6 +7,23 @@ type HeadingProps = {
   children: React.ReactNode;
   className: string;
   color: string;
+  fontFamily?: string;
+};
+
+const getStyles = ({ color, primary_color, fontFamily }: any) => {
+  const obj: any = {};
+  obj.color = "#000000";
+  if (primary_color) {
+    obj.color = primary_color;
+  }
+  if (color) {
+    obj.color = color;
+  }
+  if (fontFamily != "") {
+    obj.fontFamily = fontFamily;
+  }
+  // color: color || primary_color || "#000000",
+  return obj;
 };
 
 export default async function Heading({
@@ -15,10 +32,12 @@ export default async function Heading({
   children,
   className,
   color,
+  fontFamily = "",
 }: HeadingProps) {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const { primary_color } = settings.data;
+
   return (
     <Comp
       className={clsx(
@@ -29,9 +48,10 @@ export default async function Heading({
         size === "sm" && "text-xl sm:text-2xl md:text-3xl",
         size === "xs" && "text-lg sm:text-xl md:text-2xl",
         size === "xxs" && "text-sm sm:text-md md:text-xl",
+        fontFamily && "tracking-tight",
         className
       )}
-      style={{ color: color || primary_color || "#000000" }}
+      style={getStyles({ color, primary_color, fontFamily })}
     >
       {children}
     </Comp>
