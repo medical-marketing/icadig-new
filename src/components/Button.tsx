@@ -12,8 +12,7 @@ export default async function Button({
 }: any) {
   const client = createClient();
   const settings = await client.getSingle("settings");
-  const { cta_background_color, cta_text_color, default_iframe } =
-    settings.data;
+  const { cta_background_color, cta_text_color } = settings.data;
 
   // // render the iframe CLIENT-SIDE
   // //@ts-ignore
@@ -23,9 +22,10 @@ export default async function Button({
 
   return (
     <div className="relative">
+      {/*@ts-ignore*/}
       {iframe?.id ? (
         <CTA
-          iframe={<Iframe iframe={iframe || default_iframe}></Iframe>}
+          iframe={<Iframe iframe={iframe}></Iframe>}
           // cta_iframe={cta_iframe || ""}
           className={className}
           style={{
@@ -50,7 +50,6 @@ export default async function Button({
           {children}
         </PrismicNextLink>
       )}
-
       {/* <PrismicNextLink
         className={clsx(
           "block w-full bg-yellow-400 hover:bg-yellow-500 transition-colors duration-200 ease-in-out py-4 md:py-6 px-8 md:px-12 font-display font-semibold text-lg md:text-2xl text-center text-white tracking-wide",

@@ -39,11 +39,11 @@ export type BackgroundOfSmallImagesDocument<Lang extends string = string> =
   >;
 
 /**
- * Content for Footer Reusable documents
+ * Content for Footer documents
  */
-interface FooterReusableDocumentData {
+interface FooterDocumentData {
   /**
-   * Background Image field in *Footer Reusable*
+   * Background Image field in *Footer*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -54,7 +54,7 @@ interface FooterReusableDocumentData {
   background_image: prismic.ImageField<never>;
 
   /**
-   * Terms and Conditions Text field in *Footer Reusable*
+   * Terms and Conditions Text field in *Footer*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -65,7 +65,7 @@ interface FooterReusableDocumentData {
   terms_and_conditions_text: prismic.RichTextField;
 
   /**
-   * Logo field in *Footer Reusable*
+   * Logo field in *Footer*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -76,7 +76,7 @@ interface FooterReusableDocumentData {
   logo: prismic.ImageField<never>;
 
   /**
-   * Company Name field in *Footer Reusable*
+   * Company Name field in *Footer*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -87,7 +87,7 @@ interface FooterReusableDocumentData {
   company_name: prismic.KeyTextField;
 
   /**
-   * Privacy Policy Link field in *Footer Reusable*
+   * Privacy Policy Link field in *Footer*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -98,7 +98,7 @@ interface FooterReusableDocumentData {
   privacy_policy_link: prismic.LinkField;
 
   /**
-   * Terms and Conditions Link field in *Footer Reusable*
+   * Terms and Conditions Link field in *Footer*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -109,7 +109,7 @@ interface FooterReusableDocumentData {
   terms_and_conditions_link: prismic.LinkField;
 
   /**
-   * Whatsapp Link field in *Footer Reusable*
+   * Whatsapp Link field in *Footer*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -120,7 +120,7 @@ interface FooterReusableDocumentData {
   whatsapp_link: prismic.LinkField;
 
   /**
-   * Whatsapp Icon Color field in *Footer Reusable*
+   * Whatsapp Icon Color field in *Footer*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
@@ -131,7 +131,7 @@ interface FooterReusableDocumentData {
   whatsapp_icon_color: prismic.ColorField;
 
   /**
-   * Whatsapp Icon Background Color field in *Footer Reusable*
+   * Whatsapp Icon Background Color field in *Footer*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
@@ -142,7 +142,7 @@ interface FooterReusableDocumentData {
   whatsapp_icon_background_color: prismic.ColorField;
 
   /**
-   * Medical Marketing Website Link field in *Footer Reusable*
+   * Medical Marketing Website Link field in *Footer*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -153,7 +153,7 @@ interface FooterReusableDocumentData {
   medical_marketing_website_link: prismic.LinkField;
 
   /**
-   * Medical Marketing Website Link Text field in *Footer Reusable*
+   * Medical Marketing Website Link Text field in *Footer*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -165,7 +165,7 @@ interface FooterReusableDocumentData {
 }
 
 /**
- * Footer Reusable document from Prismic
+ * Footer document from Prismic
  *
  * - **API ID**: `footer`
  * - **Repeatable**: `true`
@@ -173,19 +173,15 @@ interface FooterReusableDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type FooterReusableDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<FooterReusableDocumentData>,
-    "footer",
-    Lang
-  >;
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
 
 /**
- * Content for Header Reusable documents
+ * Content for Header documents
  */
-interface HeaderReusableDocumentData {
+interface HeaderDocumentData {
   /**
-   * Background Color field in *Header Reusable*
+   * Background Color field in *Header*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
@@ -196,7 +192,7 @@ interface HeaderReusableDocumentData {
   background_color: prismic.ColorField;
 
   /**
-   * Logo field in *Header Reusable*
+   * Logo field in *Header*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -207,7 +203,7 @@ interface HeaderReusableDocumentData {
   logo: prismic.ImageField<never>;
 
   /**
-   * CTA Icon field in *Header Reusable*
+   * CTA Icon field in *Header*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -218,7 +214,7 @@ interface HeaderReusableDocumentData {
   cta_icon: prismic.ImageField<never>;
 
   /**
-   * CTA Message field in *Header Reusable*
+   * CTA Message field in *Header*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -229,7 +225,7 @@ interface HeaderReusableDocumentData {
   cta_message: prismic.KeyTextField;
 
   /**
-   * CTA Phone field in *Header Reusable*
+   * CTA Phone field in *Header*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -240,7 +236,7 @@ interface HeaderReusableDocumentData {
   cta_phone: prismic.KeyTextField;
 
   /**
-   * CTA Link field in *Header Reusable*
+   * CTA Link field in *Header*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -251,7 +247,7 @@ interface HeaderReusableDocumentData {
   cta_link: prismic.LinkField;
 
   /**
-   * CTA Text Color field in *Header Reusable*
+   * CTA Text Color field in *Header*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
@@ -263,7 +259,7 @@ interface HeaderReusableDocumentData {
 }
 
 /**
- * Header Reusable document from Prismic
+ * Header document from Prismic
  *
  * - **API ID**: `header`
  * - **Repeatable**: `true`
@@ -271,12 +267,8 @@ interface HeaderReusableDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HeaderReusableDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<HeaderReusableDocumentData>,
-    "header",
-    Lang
-  >;
+export type HeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
 /**
  * Content for iFrame documents
@@ -536,17 +528,6 @@ interface SettingsDocumentData {
   gtm_id: prismic.KeyTextField;
 
   /**
-   * default iFrame field in *Settings*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: settings.default_iframe
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  default_iframe: prismic.ContentRelationshipField<"iframe">;
-
-  /**
    * Block Indexing by Search Engines field in *Settings*
    *
    * - **Field Type**: Boolean
@@ -577,8 +558,8 @@ export type SettingsDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | BackgroundOfSmallImagesDocument
-  | FooterReusableDocument
-  | HeaderReusableDocument
+  | FooterDocument
+  | HeaderDocument
   | IframeDocument
   | LandingPageDocument
   | SettingsDocument;
@@ -1844,7 +1825,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -1853,10 +1834,10 @@ declare module "@prismicio/client" {
       BackgroundOfSmallImagesDocument,
       BackgroundOfSmallImagesDocumentData,
       BackgroundOfSmallImagesDocumentDataSlicesSlice,
-      FooterReusableDocument,
-      FooterReusableDocumentData,
-      HeaderReusableDocument,
-      HeaderReusableDocumentData,
+      FooterDocument,
+      FooterDocumentData,
+      HeaderDocument,
+      HeaderDocumentData,
       IframeDocument,
       IframeDocumentData,
       LandingPageDocument,
