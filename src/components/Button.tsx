@@ -38,7 +38,7 @@ export default async function Button({
       ) : (
         <PrismicNextLink
           className={clsx(
-            "block w-full transition-colors duration-200 ease-in-out py-4 md:py-6 px-8 md:px-12 font-display font-semibold text-lg md:text-2xl text-center tracking-wide text-white bg-[#b11c10] hover:bg-![#5e5e5e] rounded-full",
+            "block w-fit mx-auto transition-colors duration-200 ease-in-out py-2 md:py-3 px-6 md:px-8 font-display font-semibold text-lg md:text-2xl text-center tracking-wide text-white bg-[#b11c10] hover:bg-![#5e5e5e] rounded-full",
             className
           )}
           style={{

@@ -157,6 +157,20 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             })}
           />
         </div>
+        <div className="cta-div mx-auto max-w-xl ">
+          {slice.primary.cta_text?.length && (
+            <Button
+              cta_link={slice.primary.cta_link}
+              iframe={slice.primary.iframe}
+            >
+              {slice.primary.cta_text}
+            </Button>
+          )}
+          <AfterCtaText
+            field={slice.primary.after_cta_text}
+            color={slice.primary.sub_header_color}
+          />
+        </div>
         <div className="subheader-div mx-[0rem] mobile:mx-[2rem] md:mx-[5rem]">
           <PrismicRichText
             field={slice.primary.sub_header}
@@ -170,20 +184,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className="mx-[0rem] mobile:mx-[2rem] md:mx-[8rem]">
           <div className="image-div">
             <PrismicNextImage field={slice.primary.image} className="py-4" />
-          </div>
-          <div className="cta-div mx-auto max-w-xl ">
-            {slice.primary.cta_text?.length && (
-              <Button
-                cta_link={slice.primary.cta_link}
-                iframe={slice.primary.iframe}
-              >
-                {slice.primary.cta_text}
-              </Button>
-            )}
-            <AfterCtaText
-              field={slice.primary.after_cta_text}
-              color={slice.primary.sub_header_color}
-            />
           </div>
         </div>
         <div className="key-points-div mt-8 flex justify-center gap-8 flex-wrap">

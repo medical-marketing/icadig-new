@@ -16,7 +16,7 @@ const components: componentsType = ({ color }) => {
 const AfterCtaText = (props: any) => {
   return (
     <div>
-      <div className="after-cta-div text-center mx-[1rem]">
+      <div className="after-cta-div text-center mx-2 mobile:mx-8">
         <PrismicRichText
           {...props}
           components={components({ color: props.color })}
