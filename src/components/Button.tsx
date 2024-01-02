@@ -38,12 +38,12 @@ export default async function Button({
       ) : (
         <PrismicNextLink
           className={clsx(
-            "block w-full transition-colors duration-200 ease-in-out py-4 md:py-6 px-8 md:px-12 font-display font-semibold text-lg md:text-2xl text-center tracking-wide text-white bg-yellow-400 hover:bg-yellow-500",
+            "block w-full transition-colors duration-200 ease-in-out py-4 md:py-6 px-8 md:px-12 font-display font-semibold text-lg md:text-2xl text-center tracking-wide text-white bg-[#b11c10] hover:bg-![#5e5e5e] rounded-full",
             className
           )}
           style={{
             color: cta_text_color || "rgb(250,255,255)",
-            backgroundColor: cta_background_color || "rgb(234,179,8)",
+            backgroundColor: cta_background_color || "#b11c10",
           }}
           field={cta_link}
         >
